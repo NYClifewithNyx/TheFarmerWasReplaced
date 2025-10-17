@@ -1,0 +1,25 @@
+In three different windows:
+
+1)
+while True:
+		for i in range(get_world_size()):
+				if  get_entity_type() == Entities.Dead_Pumpkin:
+  				harvest()
+  				plant(Entities.Pumpkin)
+  				move(North)
+				if get_entity_type() == Entities.Pumpkin:
+	  			move(North)
+				else:
+  				harvest()
+          till() //once the grond is 100% covered with Grounds.soil, then remove till()
+  				plant(Entities.Pumpkin)
+  				move(North)
+				
+  	move(East)
+					
+2)
+harvest()
+
+//I have not figured out that the drone determines between 1 large pumpkin in range(get_world_size()) vs. small pumpkins in the row
+				
+	
