@@ -1,0 +1,16 @@
+while True:
+	for i in range(get_world_size()):
+		if can_harvest():
+			harvest()
+			if get_ground_type() == Grounds.Grassland:
+				till()
+			plant(Entities.Carrot)
+			if get_water()<0.3:
+				use_item(Items.Water)
+			move(North)
+		else:
+			plant(Entities.Carrot)
+			if get_water()<0.3:
+				use_item(Items.Water)
+			move(North)
+	move(East)
